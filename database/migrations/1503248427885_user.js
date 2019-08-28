@@ -14,6 +14,7 @@ class UserSchema extends Schema {
         .unique();
       table.string("password", 60).notNullable();
       table.boolean("isAdmin").default(0);
+      table.boolean("isSuperAdmin").default(0);
       table.timestamps();
     });
   }
